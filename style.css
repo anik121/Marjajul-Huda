@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Titillium+Web");
+@import url("https://fonts.googleapis.com/css?family=Catamaran");
 :root {
   width: 100%;
   height: 100%; }
@@ -50,6 +51,8 @@ header {
   margin-top: -70px;
   background-color: #1e2c3e;
   border: 1px solid #092234;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex; }
   .nav_menu .menu_trigger {
     color: white;
@@ -67,6 +70,8 @@ header {
     font-size: 18px;
     text-align: center;
     font-family: 'Titillium Web', sans-serif;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
     transition: all 0.5s;
     cursor: pointer; }
     .nav_menu .nav_bar_menu li:hover {
@@ -76,6 +81,8 @@ header {
   .nav_menu form {
     position: absolute;
     right: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex; }
     .nav_menu form input[type=search] {
       width: 220px;
@@ -84,6 +91,8 @@ header {
       background-color: #092234;
       color: #eeeeee;
       padding-left: 20px;
+      -webkit-transition: all 0.5s;
+      -o-transition: all 0.5s;
       transition: all 0.5s; }
       .nav_menu form input[type=search]:focus {
         background-color: #eeeeee;
@@ -117,19 +126,31 @@ header {
   background-color: #05141e; }
 
 main {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   background-color: white;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
   padding: 10px 10px; }
   main .post_box {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
-    width: 75%; }
+    width: 75%;
+    margin: auto; }
     main .post_box .post_content {
+      display: block;
       max-width: 450px;
-      margin: 10px 5px 0 0; }
+      margin-top: 5px; }
       main .post_box .post_content p {
         margin: 0;
         display: inline-block;
@@ -141,23 +162,28 @@ main {
 main .sidebar {
   margin-top: 10px;
   padding: 0 5px;
-  width: 330px; }
+  max-width: 530px; }
   main .sidebar h4 {
     background-color: #1e2c3e;
     text-align: center;
     color: #eee;
     padding: 10px 0;
     margin: 0; }
-  main .sidebar .box ul {
-    margin: 0; }
-  main .sidebar .box li {
-    display: inline-block;
-    padding: 10px 5px;
-    background-color: #092234; }
-  main .sidebar .box a {
-    color: #eee; }
+  main .sidebar .box {
+    max-width: 350px;
+    margin: auto; }
+    main .sidebar .box ul {
+      margin: 0; }
+    main .sidebar .box li {
+      display: inline-block;
+      padding: 10px 5px;
+      margin: 2px 0 0;
+      background-color: #092234; }
+    main .sidebar .box a {
+      color: #eee; }
   main .sidebar .box2 {
-    margin-top: 20px; }
+    margin: 5px auto auto;
+    max-width: 350px; }
     main .sidebar .box2 ul {
       margin: 0; }
     main .sidebar .box2 li {
@@ -178,10 +204,17 @@ footer {
   top: 30px;
   width: inherit;
   background-color: #092234;
-  padding: 30px 0; }
+  padding: 30px 0;
+  font-family: 'Catamaran', sans-serif; }
   footer #widget_area {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center; }
     footer #widget_area .box {
       color: #eee;
@@ -193,6 +226,8 @@ footer {
     position: absolute;
     top: 40px;
     left: 50%;
+    -webkit-transform: translate(-50%);
+    -ms-transform: translate(-50%);
     transform: translate(-50%);
     padding: 10px;
     width: 200px;
@@ -217,4 +252,15 @@ footer {
         text-align: left;
         display: block; } }
 
-/*# sourceMappingURL=style.css.map */
+@media (max-width: 700px) {
+  main {
+    display: block; }
+  main .sidebar {
+    margin: 10px auto;
+    padding: 10px 0; } }
+
+@media (max-width: 800px) {
+  footer #widget_area {
+    display: block; }
+    footer #widget_area .box {
+      margin: 10px 20px; } }

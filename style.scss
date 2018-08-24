@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+@import url('https://fonts.googleapis.com/css?family=Catamaran');
+
+
 $main_light_color: #1e2c3e;
 $main_deep_color: #092234;
 :root{
@@ -159,9 +162,11 @@ main{
     flex-wrap: wrap;
     justify-content: center;
     width: 75%;
+    margin: auto;
     .post_content {
+      display: block;
       max-width: 450px;
-      margin: 10px 5px 0 0;
+      margin-top: 5px;
       p{
         margin: 0;
         display: inline-block;
@@ -178,7 +183,7 @@ main{
   .sidebar{
     margin-top: 10px;
     padding: 0 5px;
-    width: 330px;
+    max-width: 530px;
     h4{
       background-color: $main_light_color;
       text-align: center;
@@ -187,12 +192,15 @@ main{
       margin: 0;
     }
     .box{
+      max-width: 350px;
+      margin: auto;
       ul{
         margin: 0;
       }
       li{
         display: inline-block;
         padding: 10px 5px;
+        margin: 2px 0 0;
         background-color: $main_deep_color;
       }
       a{
@@ -200,7 +208,8 @@ main{
       }
     }
     .box2{
-      margin-top: 20px;
+      margin: 5px auto auto;
+      max-width: 350px;
       ul{
         margin: 0;
       }
@@ -229,6 +238,7 @@ footer{
   width: inherit;
   background-color: $main_deep_color;
   padding: 30px 0;
+  font-family: 'Catamaran', sans-serif;
   #widget_area{
     display: flex;
     justify-content: center;
@@ -276,6 +286,26 @@ footer{
           text-align: left;
           display: block;
         }
+      }
+    }
+  }
+}
+@media (max-width: 700px) {
+  main{
+    display: block;
+  }
+  main .sidebar{
+    margin: 10px auto;
+    padding: 10px 0;
+  }
+}
+
+@media  (max-width: 800px) {
+  footer{
+    #widget_area{
+      display: block;
+      .box{
+        margin: 10px 20px;
       }
     }
   }
